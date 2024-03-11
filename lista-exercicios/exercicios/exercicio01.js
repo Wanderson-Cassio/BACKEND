@@ -1,24 +1,21 @@
 // 1. Faça um Programa que receba quatro notas de um aluno, calcule e imprima a média aritmética das notas e a mensagem de aprovado para média superior ou igual a 7.0 ou a mensagem de reprovado para média inferior a 7.0.
 
-let prompt = require('prompt-sync') ();
+const prompt = require('prompt-sync') ();
 
+console.log("Exercício 1")
+console.log("Calcular média")
 
-let notaP1 = prompt("Digite sua 1ª nota:")
-let notaP2 = prompt("Digite sua 2ª nota:")
-let notaP3 = prompt("Digite sua 3ª nota:")
-let notaP4 = prompt("Digite sua 4ª nota:")
-
-let nota1 = Number(notaP1)
-let nota2 = Number(notaP2)
-let nota3 = Number(notaP3)
-let nota4 = Number(notaP4)
+let nota1 = Number(prompt("Digite a nota 1: "))
+let nota2 = Number(prompt("Digite a nota 2: "))
+let nota3 = Number(prompt("Digite a nota 3: "))
+let nota4 = Number(prompt("Digite a nota 4: "))
 
 let media = (nota1 + nota2 + nota3 + nota4) / 4
 
-console.log("MEDIA: ", media)
+console.log("Sua média é: " + media)
 
 if(media >= 7) {
-    console.log("APROVADO!")
+    console.log("Você foi aprovado!")
 } else {
-    console.log("REPROVADO!")
+    console.log("Você foi reprovado!")
 }
