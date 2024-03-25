@@ -2,19 +2,23 @@
 
 const prompt = require('prompt-sync') ();
 
-console.log("Exercício 1")
-console.log("Calcular média")
 
-const nota1 = Number(prompt("Digite sua primeira nota: "))
-const nota2 = Number(prompt("Digite sua segunda nota: "))
-const nota3 = Number(prompt("Digite sua terceira nota: "))
-const nota4 = Number(prompt("Digite sua quarta nota: "))
+let notaP1 = prompt("Digite sua 1ª nota:")
+let notaP2 = prompt("Digite sua 2ª nota:")
+let notaP3 = prompt("Digite sua 3ª nota:")
+let notaP4 = prompt("Digite sua 4ª nota:")
 
-const media = (nota1 + nota2 + nota3 + nota4) / 4
-console.log("Sua média é: " + media)
+let nota1 = Number(notaP1)
+let nota2 = Number(notaP2)
+let nota3 = Number(notaP3)
+let nota4 = Number(notaP4)
+
+let media = (nota1 + nota2 + nota3 + nota4) / 4
+
+console.log("MEDIA: ", media)
 
 if(media >= 7) {
-    console.log("Você foi Aprovado!")
+    console.log("APROVADO!")
 } else {
-    console.log("Você foi Reprovado!")
+    console.log("REPROVADO!")
 }
