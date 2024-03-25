@@ -3,7 +3,7 @@ percentual de reajuste. Calcular e escrever o valor do novo salário.*/
 
 const prompt = require('prompt-sync') ();
 
-console.log("Exercício 3")
+console.log("Exercício 03")
 
 let salario = Number(prompt('Digite o salário atual R$: '))
 let reajuste = Number(prompt('Digite o percentual de reajuste: '))

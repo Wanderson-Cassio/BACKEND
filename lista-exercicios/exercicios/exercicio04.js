@@ -6,7 +6,7 @@ custo final ao consumidor.*/
 
 const prompt = require('prompt-sync') ();
 
-console.log("Exercício 4")
+console.log("Exercício 04")
 
 let fabrica = Number(prompt('Digite o valor de fábrica R$: '))
 const porcenDist = 0.28

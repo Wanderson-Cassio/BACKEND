@@ -3,7 +3,7 @@
 
 const prompt = require('prompt-sync') ();
 
-console.log("Exercício 8")
+console.log("Exercício 08")
 
 const raio = Number(prompt('Digite o raio caixa d’água cilíndrica: '))
 const altura = Number(prompt('Digite a altura da caixa d’água cilíndrica: '))

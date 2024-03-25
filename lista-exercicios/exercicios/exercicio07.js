@@ -2,7 +2,7 @@
 
 const prompt = require('prompt-sync') ();
 
-console.log("Exercício 7")
+console.log("Exercício 07")
 
 let nota1 = Number(prompt("Digite sua primeira nota: "))
 let nota2 = Number(prompt("Digite sua segunda nota: "))

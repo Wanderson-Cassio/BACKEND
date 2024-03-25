@@ -4,7 +4,7 @@ cada um representa em relação ao total de eleitores.*/
 
 const prompt = require('prompt-sync') ();
 
-console.log("Exercício 2")
+console.log("Exercício 02")
 
 let votosvalidos = Number(prompt("Digite os votos validos: "))
 let votosbrancos = Number(prompt("Digite os votos brancos: "))

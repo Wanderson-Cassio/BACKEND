@@ -5,7 +5,7 @@ distribuidor e o imposto, e calcular e escrever o custo final ao consumidor*/
 
 const prompt = require('prompt-sync') ();
 
-console.log("Exercício 5")
+console.log("Exercício 05")
 
 let fabrica = Number(prompt('Digite o valor de fábrica R$: '))
 let distribuidor = Number(prompt('Digite a porcentagem do distribuidor: '))

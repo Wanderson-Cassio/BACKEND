@@ -2,7 +2,7 @@
 
 const prompt = require('prompt-sync') ();
 
-console.log("Exercício 6")
+console.log("Exercício 06")
 
 let salarioF = Number(prompt('Digite o salário fixo por mês R$: '))
 let nCarrosV = Number(prompt('Digite o número de carros vendidos '))
