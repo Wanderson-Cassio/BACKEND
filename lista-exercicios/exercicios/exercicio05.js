@@ -3,7 +3,9 @@ porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica).
 Escreva um script para ler o custo de fábrica de um carro, a porcentagem do 
 distribuidor e o imposto, e calcular e escrever o custo final ao consumidor*/
 
-let prompt = require('prompt-sync') ();
+const prompt = require('prompt-sync') ();
+
+console.log("Exercício 5")
 
 let fabrica = Number(prompt('Digite o valor de fábrica R$: '))
 let distribuidor = Number(prompt('Digite a porcentagem do distribuidor: '))

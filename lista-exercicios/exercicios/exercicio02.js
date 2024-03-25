@@ -2,15 +2,17 @@
 número de votos brancos, nulos e válidos. Calcular e escrever o percentual que 
 cada um representa em relação ao total de eleitores.*/
 
-let prompt = require('prompt-sync') ();
+const prompt = require('prompt-sync') ();
 
-// let votosvalidos = Number(prompt("Digite os votos validos: "))
-// let votosbrancos = Number(prompt("Digite os votos brancos: "))
-// let votosnulos = Number(prompt("Digite os votos nulos: "))
+console.log("Exercício 2")
 
-let votosvalidos = 53050
-let votosbrancos = 5600
-let votosnulos = 1350
+let votosvalidos = Number(prompt("Digite os votos validos: "))
+let votosbrancos = Number(prompt("Digite os votos brancos: "))
+let votosnulos = Number(prompt("Digite os votos nulos: "))
+
+// const votosvalidos = 53050
+// const votosbrancos = 5600
+// const votosnulos = 1350
 
 let eleitores = votosvalidos + votosbrancos + votosnulos
 console.log(`A eleição municipal ocorreu com ${eleitores} eleitores`)

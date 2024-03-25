@@ -4,7 +4,9 @@ Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%,
 escrever um script para ler o custo de fábrica de um carro, calcular e escrever o 
 custo final ao consumidor.*/
 
-let prompt = require('prompt-sync') ();
+const prompt = require('prompt-sync') ();
+
+console.log("Exercício 4")
 
 let fabrica = Number(prompt('Digite o valor de fábrica R$: '))
 const porcenDist = 0.28
