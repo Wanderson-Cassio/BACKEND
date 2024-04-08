@@ -1,0 +1,17 @@
+{
+  "name": "02-segundo-api",
+  "version": "1.0.0",
+  "description": "\"testando uma api express\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"Wandeson Cássio\"",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1",
+    "nodemon": "^3.1.0"
+  },
+  "devDependencies": {}
+}
