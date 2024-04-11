@@ -25,7 +25,7 @@ router.get('/produtos', (req, res) => {
     res.json(listaProdutos)
 })
 
-// READ -> Buscar todo o pruduto pelo ID 
+// READ -> Buscar o pruduto pelo ID 
 router.get('/produtos/:id', (req, res) => {
     const id = req.params.id
     const index = listaProdutos.findIndex(produto => produto.id == id)
@@ -36,8 +36,6 @@ router.get('/produtos/:id', (req, res) => {
 // CREATE -> Criar um produto
 router.post('/produtos' , (req, res) => {
     const novoProduto = req.body
-
-    listaProdutos.length
 
     const produto = {
         id: listaProdutos.length + 1,
@@ -58,6 +56,7 @@ router.delete('/produtos/:id', (req, res) => {
     res.json({ mensagem: "Produto excluido com sucesso!"})
 })
 
+// UPADATE -> Alterar um produto
 router.put('/produtos/:id', (req, res) => {
     const id = req.params.id
     const novosDados = req.body
