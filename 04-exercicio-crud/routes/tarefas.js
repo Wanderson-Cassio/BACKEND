@@ -5,10 +5,13 @@ const router = express.Router()
 // Criar uma lista
 listaTarefas = []
 
+
+// Recuperar todas as tarefas.
 router.get('/tarefas', (req, res) => {
     res.json(listaTarefas)
 })
 
+// Recuperar uma tarefa específica por meio de seu identificador.
 router.get('/tarefas/:id', (req, res) => {
     const id = req.params.id
     const tarefa = listaTarefas.find(tarefa => tarefa.id == id)
@@ -20,6 +23,7 @@ router.get('/tarefas/:id', (req, res) => {
     
 })
 
+// Adicionar uma nova tarefa.
 router.post('/tarefas', (req, res) => {
     const novaTarefa = req.body
     
@@ -32,6 +36,7 @@ router.post('/tarefas', (req, res) => {
     res.json({ mensagem: "Tarefa cadastrada com sucesso!"})
 })
 
+// Remover uma tarefa da lista com base em seu identificador.
 router.delete('/tarefas/:id', (req, res) => {
     const id = req.params.id
     const index = listaTarefas.findIndex(tarefa => tarefa.id == id)
@@ -39,6 +44,7 @@ router.delete('/tarefas/:id', (req, res) => {
     res.json({ mensagem: "Tarefa exluida com sucesso!"})
 })
 
+// Atualizar uma tarefa existente com base em seu identificador.
 router.put('/tarefas/:id', (req, res) => {
     const id = req.params.id
     const novaTarefa = req.body
