@@ -26,8 +26,7 @@ router.get('/pessoas', (req, res) =>{
 // Recuperar uma pessoa específica por meio de seu identificador.
 router.get('/pessoas/:id', (req, res) => {
     const id = req.params.id
-    const index =  listaPessoas.findIndex(pessoa => pessoa.id == id)
-    const pessoa = listaPessoas[index]
+    const pessoa =  listaPessoas.find(pessoa => pessoa.id == id)
     res.json(pessoa)
 })
 
@@ -50,16 +49,16 @@ router.post('/pessoas', (req, res) => {
 // Atualizar uma pessoa existente com base em seu identificador.
 router.put('/pessoas/:id', (req, res) => {
     const id = req.params.id
-    const novoPessoa = req.body
+    const novaPessoa = req.body
 
     const index = listaPessoas.findIndex(pessoa => pessoa.id == id)
 
     const atualizarPessoa = {
         "id": id,
-        "nome": novoPessoa.nome,
-        "idade": novoPessoa.idade,
-        "email": novoPessoa.email,
-        "telefone": novoPessoa.telefone
+        "nome": novaPessoa.nome,
+        "idade": novaPessoa.idade,
+        "email": novaPessoa.email,
+        "telefone": novaPessoa.telefone
     }
     listaPessoas[index] = atualizarPessoa
 
