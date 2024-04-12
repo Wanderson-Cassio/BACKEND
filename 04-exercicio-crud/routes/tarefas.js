@@ -2,6 +2,7 @@ const express = require('express')
 // Criar um router
 const router = express.Router()
 
+// Criar uma lista
 listaTarefas = []
 
 router.get('/tarefas', (req, res) => {
@@ -28,7 +29,7 @@ router.post('/tarefas', (req, res) => {
     }
     listaTarefas.push(tarefa)
 
-    res.json({ mensagem: "Tarefa dadastrada com sucesso!"})
+    res.json({ mensagem: "Tarefa cadastrada com sucesso!"})
 })
 
 router.delete('/tarefas/:id', (req, res) => {
