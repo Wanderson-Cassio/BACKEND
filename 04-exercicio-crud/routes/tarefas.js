@@ -10,26 +10,47 @@ router.get('/tarefas', (req, res) => {
 
 router.get('/tarefas/:id', (req, res) => {
     const id = req.params.id
-    const tarefa = listaTarefas[id]
-    res.json(tarefa)
+    const tarefa = listaTarefas.find(tarefa => tarefa.id == id)
+    if (tarefa) {
+        res.json(tarefa)
+    } else {
+        res.json({ mensagem: "Tarefa não encontrada!"})
+    }
+    
 })
 
 router.post('/tarefas', (req, res) => {
-    const tarefa = req.body
-    listaTarefas.push(tarefa.nome)
-    res.status(201).json({ mensagem: "Tarefa cadastrada com sucesso!"})
+    const novaTarefa = req.body
+    
+    const tarefa = {
+        id: listaTarefas.length + 1,
+        nome: novaTarefa.nome
+    }
+    listaTarefas.push(tarefa)
+
+    res.json({ mensagem: "Tarefa dadastrada com sucesso!"})
 })
 
 router.delete('/tarefas/:id', (req, res) => {
     const id = req.params.id
-    listaTarefas.splice(id, 1)
+    const index = listaTarefas.findIndex(tarefa => tarefa.id == id)
+    listaTarefas.splice(index, 1)
     res.json({ mensagem: "Tarefa exluida com sucesso!"})
 })
 
 router.put('/tarefas/:id', (req, res) => {
     const id = req.params.id
-    const tarefa = req.body
-    listaTarefas[id] = tarefa.nome
+    const novaTarefa = req.body
+    
+    const index = listaTarefas.findIndex(tarefa => tarefa.id == id)
+
+    const tarefaAlterada = {
+        id: id,
+        nome: novaTarefa.nome
+    }
+
+    listaTarefas[index] = tarefaAlterada
+
     res.json({ mensagem: "Tarefa alterada com sucesso!"})
 })
 
