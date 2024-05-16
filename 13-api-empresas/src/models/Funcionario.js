@@ -1,18 +1,18 @@
 const mongoose = require('mongoose')
 
-const schema = new  mongoose.Schema(
+const schema = new mongoose.Schema(
     {
         nome: {
             type: String,
-            require: true
+            required: true
         },
         dataNascimento: {
             type: Date,
-            require: true
+            required: true
         },
         email: {
             type: String,
-            require: true,
+            required: true,
             lowercase: true,
             trim: true,
             unique: true
@@ -20,7 +20,7 @@ const schema = new  mongoose.Schema(
         cargo: {
             type: mongoose.SchemaTypes.ObjectId,
             ref: 'cargo',
-            require: false
+            required: false
         }
     },
     {

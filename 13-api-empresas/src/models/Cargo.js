@@ -1,10 +1,18 @@
 const mongoose = require('mongoose')
 
-const schema = new  mongoose.Schema(
+const schema = new mongoose.Schema(
     {
         nome: {
             type: String,
-            require: true
+            required: true
+        },
+        descricao: {
+            type: String,
+            required: false
+        },
+        salario: {
+            type: Number,
+            required: true
         }
     },
     {
