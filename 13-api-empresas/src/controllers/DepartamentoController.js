@@ -20,9 +20,9 @@ async function getById(req, res) {
 }
 
 async function update(req, res) {
-    const departamentoAtulizado = await Departamento.findByIdAndUpdate(req.params.id, req.body, { new: true })
-    if (departamentoAtulizado) {
-        res.json(departamentoAtulizado)
+    const departamentoAtualizado = await Departamento.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    if (departamentoAtualizado) {
+        res.json(departamentoAtualizado)
     } else {
         res.status(404).json({ mensagem: "Departamento não encontrato!" })
     }
