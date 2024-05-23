@@ -6,11 +6,11 @@ const jwt = require('jsonwebtoken')
 const JWT_SECRET = process.env.JWT_SECRET
 
 async function registrar(req, res) {
-    const {nome, email, senha} = req.body
+    const { nome, email, senha } = req.body
 
     const usuarioExiste = await Usuario.findOne({ email })
     if (usuarioExiste) {
-        return res.status(400).json({ mensagem: "usuário já existe!"})
+        return res.status(400).json({ mensagem: "usuário já existe!" })
     }
 
     const hash = await bcrypt.hash(senha, 10)
@@ -23,22 +23,23 @@ async function registrar(req, res) {
 
     await usuario.save()
 
-    res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!"})
+    res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!" })
 }
 
 async function login(req, res) {
+
     const { email, senha } = req.body
 
     const usuario = await Usuario.findOne({ email })
 
     if (!usuario) {
-        return res.status(401).json({ mensagem: "Usuário não cadastrado!"})
+        return res.status(401).json({ mensagem: "Usuário não cadastrado!" })
     }
 
     const senhaValida = await bcrypt.compare(senha, usuario.senha)
 
     if (!senhaValida) {
-        return res.status(401).json({ mensagem: "usuário ou senha inválido!"})
+        return res.status(401).json({ mensagem: "usuário ou senha inválidos!" })
     }
 
     const token = jwt.sign({ email: usuario.email }, JWT_SECRET, { expiresIn: '10m' })
@@ -49,7 +50,6 @@ async function login(req, res) {
             token
         }
     )
-
 }
 
 
@@ -57,7 +57,7 @@ async function login(req, res) {
 
 
 
-
 module.exports = {
-    registrar
+    registrar,
+    login
 }
