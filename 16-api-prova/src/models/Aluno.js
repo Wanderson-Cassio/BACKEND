@@ -26,16 +26,6 @@ const schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        endereco: {
-            cep: String,
-            uf: String,
-            logradouro: String,
-            localidade: String,
-            bairro: String,
-            numero: String,
-            complemento: String,
-            required: false
-        },
         curso: {
             type: mongoose.SchemaTypes.ObjectId,
             ref: 'curso',

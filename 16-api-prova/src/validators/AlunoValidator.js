@@ -19,8 +19,6 @@ const schema = yup.object().shape({
         .required('campo obrigatório'),
     genero: yup
         .string('campo precisa ser um texto'),
-    endereco: yup
-        .string('campo precisa ser um texto'),
     curso: yup
         .string('campo precisa ser um texto'),
 })

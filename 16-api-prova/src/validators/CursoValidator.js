@@ -6,9 +6,6 @@ const cargoSchema = yup.object().shape({
         .required('campo obrigatório'),
     descricao: yup
         .string('campo precisa ser um texto'),
-    disciplinas: yup
-        .string('campo precisa ser um texto')
-        .required('campo obrigatório'),
     duracao: yup
         .string('campo precisa ser um texto'),
     disciplinas: yup

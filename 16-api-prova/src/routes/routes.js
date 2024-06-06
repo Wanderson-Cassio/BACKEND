@@ -10,11 +10,11 @@ const TurmaController = require('../controllers/TurmaController')
 
 // validators
 const { validarId } = require('../validators/IdValidator')
-const { alunoValidador } = require('../validators/AlunoValidador')
-const { cursoValidador } = require('../validators/CursoValidador')
-const { disciplinaValidador } = require('../validators/DisciplinaValidador')
-const { professorValidador } = require('../validators/ProfessorValidador')
-const { turmaValidador } = require('../validators/TurmaValidador')
+const { alunoValidador } = require('../validators/AlunoValidator')
+const { cursoValidador } = require('../validators/CursoValidator')
+const { disciplinaValidador } = require('../validators/DisciplinaValidator')
+const { professorValidador } = require('../validators/ProfessorValidator')
+const { turmaValidador } = require('../validators/TurmaValidator')
 
 // Alunos
 router.post('/alunos', alunoValidador, AlunoController.create)
@@ -25,7 +25,7 @@ router.delete('/alunos/:id', validarId, AlunoController.remove)
 
 // Cursos
 router.post('/cursos', cursoValidador, CursoController.create)
-router.get('/cursos', CargoController.getAll)
+router.get('/cursos', CursoController.getAll)
 router.get('/cursos/:id', validarId, CursoController.getById)
 router.put('/cursos/:id', validarId, cursoValidador, CursoController.update)
 router.delete('/cursos/:id', validarId, CursoController.remove)
