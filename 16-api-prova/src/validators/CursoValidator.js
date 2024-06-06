@@ -6,13 +6,16 @@ const cargoSchema = yup.object().shape({
         .required('campo obrigatório'),
     descricao: yup
         .string('campo precisa ser um texto'),
-    salario: yup
-        .number('campo precisa ser um numero')
-        .min(1412, 'precisa ser maior que o salário minimo')
-        .required('campo obrigatório')
+    disciplinas: yup
+        .string('campo precisa ser um texto')
+        .required('campo obrigatório'),
+    duracao: yup
+        .string('campo precisa ser um texto'),
+    disciplinas: yup
+        .string('campo precisa ser um texto'),
 })
 
-function cargoValidador(req, res, next) {
+function cursoValidador(req, res, next) {
     cargoSchema
         .validate(req.body, { abortEarly: false })
             .then(() => next())
@@ -34,5 +37,5 @@ function cargoValidador(req, res, next) {
 }
 
 module.exports = {
-    cargoValidador
+    cursoValidador
 }

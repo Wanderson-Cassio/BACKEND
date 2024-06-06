@@ -2,54 +2,54 @@ const express = require('express')
 const router = express.Router()
 
 // controllers
-const CargoController = require('../controllers/CargoController')
-const DepartamentoController = require('../controllers/DepartamentoController')
-const FuncionarioController = require('../controllers/FuncionarioController')
-const ProjetoController = require('../controllers/ProjetoController')
-const TarefaController = require('../controllers/TarefaController')
+const AlunoController = require('../controllers/AlunoController')
+const CursoController = require('../controllers/CursoController')
+const DisciplinaController = require('../controllers/DisciplinaController')
+const ProfessorController = require('../controllers/ProfessorController')
+const TurmaController = require('../controllers/TurmaController')
 
 // validators
 const { validarId } = require('../validators/IdValidator')
-const { cargoValidador } = require('../validators/CargoValidator')
-const { departamentoValidador } = require('../validators/DepartamentoValidator')
-const { funcionarioValidador } = require('../validators/FuncionarioValidator')
-const { projetoValidador } = require('../validators/ProjetoValidator')
-const { tarefaValidador } = require('../validators/TarefaValidator')
+const { alunoValidador } = require('../validators/AlunoValidador')
+const { cursoValidador } = require('../validators/CursoValidador')
+const { disciplinaValidador } = require('../validators/DisciplinaValidador')
+const { professorValidador } = require('../validators/ProfessorValidador')
+const { turmaValidador } = require('../validators/TurmaValidador')
 
-// Cargos
-router.post('/cargos', cargoValidador, CargoController.create)
-router.get('/cargos', CargoController.getAll)
-router.get('/cargos/:id', validarId, CargoController.getById)
-router.put('/cargos/:id', validarId, cargoValidador, CargoController.update)
-router.delete('/cargos/:id', validarId, CargoController.remove)
+// Alunos
+router.post('/alunos', alunoValidador, AlunoController.create)
+router.get('/alunos', AlunoController.getAll)
+router.get('/alunos/:id', validarId, AlunoController.getById)
+router.put('/alunos/:id', validarId, alunoValidador, AlunoController.update)
+router.delete('/alunos/:id', validarId, AlunoController.remove)
 
-// Departamentos
-router.post('/departamentos', departamentoValidador, DepartamentoController.create)
-router.get('/departamentos', DepartamentoController.getAll)
-router.get('/departamentos/:id', validarId, DepartamentoController.getById)
-router.put('/departamentos/:id', validarId, departamentoValidador, DepartamentoController.update)
-router.delete('/departamentos/:id', validarId, DepartamentoController.remove)
+// Cursos
+router.post('/cursos', cursoValidador, CursoController.create)
+router.get('/cursos', CargoController.getAll)
+router.get('/cursos/:id', validarId, CursoController.getById)
+router.put('/cursos/:id', validarId, cursoValidador, CursoController.update)
+router.delete('/cursos/:id', validarId, CursoController.remove)
 
-// Funcionarios
-router.post('/funcionarios', funcionarioValidador, FuncionarioController.create)
-router.get('/funcionarios', FuncionarioController.getAll)
-router.get('/funcionarios/:id', validarId, FuncionarioController.getById)
-router.put('/funcionarios/:id', validarId, funcionarioValidador, FuncionarioController.update)
-router.delete('/funcionarios/:id', validarId, FuncionarioController.remove)
+// Disciplinas
+router.post('/disciplinas', disciplinaValidador, DisciplinaController.create)
+router.get('/disciplinas', DisciplinaController.getAll)
+router.get('/disciplinas/:id', validarId, DisciplinaController.getById)
+router.put('/disciplinas/:id', validarId, disciplinaValidador, DisciplinaController.update)
+router.delete('/disciplinas/:id', validarId, DisciplinaController.remove)
 
-// Projetos
-router.post('/projetos', projetoValidador, ProjetoController.create)
-router.get('/projetos', ProjetoController.getAll)
-router.get('/projetos/:id', validarId, ProjetoController.getById)
-router.put('/projetos/:id', validarId, projetoValidador, ProjetoController.update)
-router.delete('/projetos/:id', validarId, ProjetoController.remove)
+// Professores
+router.post('/professores', professorValidador, ProfessorController.create)
+router.get('/professores', ProfessorController.getAll)
+router.get('/professores/:id', validarId, ProfessorController.getById)
+router.put('/professores/:id', validarId, professorValidador, ProfessorController.update)
+router.delete('/professores/:id', validarId, ProfessorController.remove)
 
-// Tarefas
-router.post('/tarefas', tarefaValidador, TarefaController.create)
-router.get('/tarefas', TarefaController.getAll)
-router.get('/tarefas/:id', validarId, TarefaController.getById)
-router.put('/tarefas/:id', validarId, tarefaValidador, TarefaController.update)
-router.delete('/tarefas/:id', validarId, TarefaController.remove)
+// Turmas
+router.post('/turmas', turmaValidador, TurmaController.create)
+router.get('/turmas', TurmaController.getAll)
+router.get('/turmas/:id', validarId, TurmaController.getById)
+router.put('/turmas/:id', validarId, turmaValidador, TurmaController.update)
+router.delete('/turmas/:id', validarId, TurmaController.remove)
 
 
 module.exports = router

@@ -14,17 +14,14 @@ const schema = yup.object().shape({
     telefone: yup
         .string('campo precisa ser um texto')
         .required('campo obrigatório'),
-    dataContratacao: yup
-        .date('Data inválida')
-        .required('campo obrigatório'),
     dataNascimento: yup
         .date('Data inválida')
         .required('campo obrigatório'),
     genero: yup
         .string('campo precisa ser um texto'),
-    cargo: yup
+    endereco: yup
         .string('campo precisa ser um texto'),
-    departamento: yup
+    curso: yup
         .string('campo precisa ser um texto'),
 })
 

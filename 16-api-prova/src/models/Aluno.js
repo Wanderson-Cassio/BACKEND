@@ -33,7 +33,8 @@ const schema = new mongoose.Schema(
             localidade: String,
             bairro: String,
             numero: String,
-            complemento: String
+            complemento: String,
+            required: false
         },
         curso: {
             type: mongoose.SchemaTypes.ObjectId,

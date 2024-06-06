@@ -15,9 +15,9 @@ const schema = new mongoose.Schema(
             ref: 'curso',
             required: false
         },
-        aluno: {
+        disciplina: {
             type: mongoose.SchemaTypes.ObjectId,
-            ref: 'aluno',
+            ref: 'disciplina',
             required: false
         },
         professor: {

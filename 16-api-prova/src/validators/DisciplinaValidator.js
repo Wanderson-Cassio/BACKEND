@@ -5,10 +5,15 @@ const schema = yup.object().shape({
         .string('campo precisa ser uma texto')
         .required('campo obrigatório'),
     descricao: yup
+        .string('campo precisa ser um texto'),
+    cargaHoraria: yup
+        .string('campo precisa ser um texto'),
+    curso: yup
         .string('campo precisa ser um texto')
+    
 })
 
-function departamentoValidador(req, res, next) {
+function disciplinaValidador(req, res, next) {
     schema
         .validate(req.body, { abortEarly: false })
         .then(() => next())
@@ -30,5 +35,5 @@ function departamentoValidador(req, res, next) {
 }
 
 module.exports = {
-    departamentoValidador
+    disciplinaValidador
 }

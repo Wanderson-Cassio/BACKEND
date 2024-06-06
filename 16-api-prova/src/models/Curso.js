@@ -15,7 +15,7 @@ const schema = new mongoose.Schema(
             required: false
         },
         disciplinas: {
-            type: Date,
+            type: String,
             required: false
         }
     },

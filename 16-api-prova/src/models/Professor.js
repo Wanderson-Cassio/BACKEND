@@ -6,9 +6,21 @@ const schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        descricao: {
+        cpf: {
             type: String,
             required: false
+        },
+        email: {
+            type: String,
+            required: true
+        },
+        dataNascimento: {
+            type: Date,
+            required: false
+        },
+        disciplinas: {
+            type: String,
+            required: true
         }
     },
     {

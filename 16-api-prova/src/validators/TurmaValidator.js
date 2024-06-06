@@ -1,23 +1,21 @@
 const yup = require('yup')
 
 const schema = yup.object().shape({
-    titulo: yup
+    nome: yup
         .string('campo precisa ser uma texto')
         .required('campo obrigatório'),
     descricao: yup
         .string('campo precisa ser uma texto'),
-    dataInicio: yup
-        .date('Data inválida'),
-    dataFim: yup
-        .date('Data inválida'),
-    funcionario: yup
+    curso: yup
+        .string('campo precisa ser uma texto'),
+    disciplina: yup
         .string('campo precisa ser um texto'),
-    projeto: yup
+    professor: yup
         .string('campo precisa ser um texto'),
 
 })
 
-function tarefaValidador(req, res, next) {
+function turmaValidador(req, res, next) {
     schema
         .validate(req.body, { abortEarly: false })
         .then(() => next())
@@ -40,5 +38,5 @@ function tarefaValidador(req, res, next) {
 }
 
 module.exports = {
-    tarefaValidador
+    turmaValidador
 }

@@ -4,17 +4,20 @@ const schema = yup.object().shape({
     nome: yup
         .string('campo precisa ser uma texto')
         .required('campo obrigatório'),
-    descricao: yup
+    cpf: yup
         .string('campo precisa ser uma texto')
         .required('campo obrigatório'),
-    dataInicio: yup
+    email: yup
+        .string('campo precisa ser uma texto')
+        .required('campo obrigatório'),
+    dataNascimento: yup
         .date('Data inválida'),
-    dataFim: yup
-        .date('Data inválida'),
+    disciplinas: yup
+        .string('campo precisa ser uma texto')
 
 })
 
-function projetoValidador(req, res, next) {
+function professorValidador(req, res, next) {
     schema
         .validate(req.body, { abortEarly: false })
         .then(() => next())
@@ -37,5 +40,5 @@ function projetoValidador(req, res, next) {
 }
 
 module.exports = {
-    projetoValidador
+    professorValidador
 }
