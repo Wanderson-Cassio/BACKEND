@@ -7,11 +7,11 @@ async function create(req, res) {
 }
 
 async function getAll(req, res) {
-    res.json(await Disciplina.find())
+    res.json(await Disciplina.find().populate(curso))
 }
 
 async function getById(req, res) {
-    const disciplina = await Disciplina.findById(req.params.id)
+    const disciplina = await Disciplina.findById(req.params.id).populate(curso)
     if (disciplina) {
         res.json(disciplina)
     } else {

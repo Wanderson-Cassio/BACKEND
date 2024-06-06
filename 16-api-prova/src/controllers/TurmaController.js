@@ -7,11 +7,11 @@ async function create(req, res) {
 }
 
 async function getAll(req, res) {
-    res.json(await Turma.find())
+    res.json(await Turma.find().populate(['curso', 'disciplina', 'professor']))
 }
 
 async function getById(req, res) {
-    const turma = await Turma.findById(req.params.id)
+    const turma = await Turma.findById(req.params.id).populate(['curso', 'disciplina', 'professor'])
     if (turma) {
         res.json(turma)
     } else {
