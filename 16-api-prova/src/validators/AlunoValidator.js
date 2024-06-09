@@ -17,8 +17,6 @@ const schema = yup.object().shape({
     dataNascimento: yup
         .date('Data inválida')
         .required('campo obrigatório'),
-    genero: yup
-        .string('campo precisa ser um texto'),
     curso: yup
         .string('campo precisa ser um texto'),
 })

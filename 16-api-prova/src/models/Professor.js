@@ -19,7 +19,7 @@ const schema = new mongoose.Schema(
             required: false
         },
         disciplinas: {
-            type: String,
+            type: Array,
             required: true
         }
     },

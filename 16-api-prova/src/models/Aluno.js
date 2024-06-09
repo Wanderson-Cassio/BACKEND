@@ -22,10 +22,6 @@ const schema = new mongoose.Schema(
             type: Date,
             required: true
         },
-        genero: {
-            type: String,
-            required: true
-        },
         curso: {
             type: mongoose.SchemaTypes.ObjectId,
             ref: 'curso',

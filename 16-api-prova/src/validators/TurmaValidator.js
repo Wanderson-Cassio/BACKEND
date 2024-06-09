@@ -4,8 +4,6 @@ const schema = yup.object().shape({
     nome: yup
         .string('campo precisa ser uma texto')
         .required('campo obrigatório'),
-    descricao: yup
-        .string('campo precisa ser uma texto'),
     turno: yup
         .string('campo precisa ser uma texto'),
     curso: yup
