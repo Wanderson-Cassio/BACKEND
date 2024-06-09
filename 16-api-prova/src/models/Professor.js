@@ -8,7 +8,7 @@ const schema = new mongoose.Schema(
         },
         cpf: {
             type: String,
-            required: false
+            required: true
         },
         email: {
             type: String,

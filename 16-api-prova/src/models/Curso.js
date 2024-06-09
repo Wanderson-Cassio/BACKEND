@@ -8,15 +8,19 @@ const schema = new mongoose.Schema(
         },
         descricao: {
             type: String,
-            required: true
+            required: false
         },
         duracao: {
             type: String,
             required: false
         },
-        disciplinas: {
+        modalidade: {
             type: String,
             required: false
+        },
+        disciplinas: {
+            type: Array,
+            required: true
         }
     },
     {

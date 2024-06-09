@@ -8,8 +8,11 @@ const cargoSchema = yup.object().shape({
         .string('campo precisa ser um texto'),
     duracao: yup
         .string('campo precisa ser um texto'),
-    disciplinas: yup
+    modalidade: yup
         .string('campo precisa ser um texto'),
+    disciplinas: yup
+        .string('campo precisa ser um texto')
+        .required('campo obrigatório'),
 })
 
 function cursoValidador(req, res, next) {

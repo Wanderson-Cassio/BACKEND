@@ -10,6 +10,10 @@ const schema = new mongoose.Schema(
             type: String,
             required: false
         },
+        turno: {
+            type: String,
+            required: false
+        },
         curso: {
             type: mongoose.SchemaTypes.ObjectId,
             ref: 'curso',

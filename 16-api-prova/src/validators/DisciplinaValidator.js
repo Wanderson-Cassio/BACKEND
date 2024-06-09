@@ -8,6 +8,8 @@ const schema = yup.object().shape({
         .string('campo precisa ser um texto'),
     cargaHoraria: yup
         .string('campo precisa ser um texto'),
+    semestre: yup
+        .string('campo precisa ser um texto'),
     curso: yup
         .string('campo precisa ser um texto')
     
