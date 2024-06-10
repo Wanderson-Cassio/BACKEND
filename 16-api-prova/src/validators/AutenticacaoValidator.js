@@ -1,3 +1,4 @@
+require('dotenv').config()
 const yup = require('yup')
 const jwt = require('jsonwebtoken')
 
