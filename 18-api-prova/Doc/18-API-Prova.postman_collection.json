@@ -1,0 +1,981 @@
+{
+	"info": {
+		"_postman_id": "6b808e20-b400-42c9-81be-38e06293f9dc",
+		"name": "18-API-Prova",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33154294"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Wanderson\",\r\n    \"email\": \"wanderson.cassio@iesb.edu.br\",\r\n    \"senha\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/auth/registro",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"registro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"wanderson.cassio@iesb.edu.br\",\r\n    \"senha\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/auth/login",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**Nesta sessão serão feitos o cadastro e login dos usuários via POST.**\n\n---\n\nOnde os campos precisam de Cadastrar precisa seguir a estrutura do seguinte modelo:\n\n{\n\n\"nome\": \"Seu usuário\",\n\n\"email: \"[seu@gmail.com](https://mailto:anderson@gmail.com) \",\n\n\"senha\":\"123456\"}\n\n---\n\n---\n\nOs de Login precisa seguir a estrutura do seguinte modelo:\n\n{\n\n\"email: \"[seu@gmail.com](https://mailto:anderson@gmail.com) \",\n\n\"senha\":\"123456\"\n\n}"
+		},
+		{
+			"name": "Alunos",
+			"item": [
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"João Silva\",\r\n    \"cpf\": \"12345678911\",\r\n    \"email\": \"joao.silva@gmail.com\",\r\n    \"telefone\": \"999999998\",\r\n    \"dataNascimento\": \"2000-6-6\",\r\n    \"curso\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/alunos",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/alunos",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"alunos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/alunos/666a9223eabbf2a521c6d3b2",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"alunos",
+								"666a9223eabbf2a521c6d3b2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Marcos Silva\",\r\n    \"cpf\": \"12345678911\",\r\n    \"email\": \"marcos.silva@gmail.com\",\r\n    \"telefone\": \"999999996\",\r\n    \"dataNascimento\": \"2002-6-6\",\r\n    \"curso\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/alunos/666920f21df57383a201585b",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"alunos",
+								"666920f21df57383a201585b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/alunos/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"alunos",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**Nesta sessão será possível cadastrar o aluno, buscar todos, buscar por ID, atualizar e deletar.**\n\n---\n\nO campo de cadastro (POST) precisa seguir a seguinte estrutura, os campos aceitos serão nome, cpf, email, telefone, dataNascimento.\n\n{\n\n\"nome\": \"\",\n\n \"cpf\": \",\n\n \"email\": \"\",\n\n \"telefone\": \"\",\n\n\"dataNascimento\": \"\",\n\n\"curso\": \"id obtido no cadastro de cursos\"\n\n}\n\nObs: o campo de curso é opcional, faça apenas se houver curso já cadastrado.\n\n---\n\nPara buscar todos basta usar a variável apiUrl/alunos em GET.\n\n---\n\nPara buscar por ID basta usar em GET apiUrl/alunos/ id obtida no cadastro do aluno.\n\n---\n\nPara atualizar basta usar em PUT apiUrl/alunos/ id obtida no cadastro do alunos, com uma requisição de corpo seguindo o mesmo modelo do cadastro.\n\n---\n\nPara remove basta usar em DELETE apiUrl/alunos/ id obtida no cadastro d alunos."
+		},
+		{
+			"name": "Cursos",
+			"item": [
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Engenharia de Software\",\r\n    \"descricao\": \"Curso de Engenharia de Software\",\r\n    \"duracao\": \"4 anos\",\r\n    \"modeladade\": \"Presencial\",\r\n    \"departamento\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/cursos",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/cursos",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"cursos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/cursos/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"cursos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Bando de dados\",\r\n    \"descricao\": \"Modelagem de dados\",\r\n    \"duracao\": \"1 anos\",\r\n    \"modeladade\": \"Semipresencial\",\r\n    \"departamento\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/cursos/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"cursos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/cursos/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"cursos",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**Nesta sessão será possível cadastrar o curso, buscar todos, buscar por ID, atualizar e deletar.**\n\n---\n\nO campo de cadastro (POST) precisa seguir a seguinte estrutura, os campos aceitos serão: nome, descricao, duracao, modalidade, departamento.\n\n{\n\n\"nome\": \"\",\n\n\"descricao\": \"\",\n\n\"duracao\": \", \"\"\n\n\"modalidade\": \"\",\n\n\"departamento\": \"id obtido no cadastro de departamentos''\n\n}\n\nObs: o campo de departamento é opcionais, sendo cadastrado apenas quando houver departamento já cadastrado.\n\n---\n\nPara buscar todos basta usar a variável apiUrl/cursos em GET.\n\n---\n\nPara buscar por ID basta usar em GET apiUrl/cursos/ id obtida no cadastro de cursos .\n\n---\n\nPara atualizar basta usar em PUT apiUrl/cursos/ id obtida no cadastro de cursos, com uma requisição de corpo seguindo o mesmo modelo do cadastro.\n\n---\n\nPara deletar basta usar em DELETE apiUrl/cursos/ id obtida no cadastro de cursos."
+		},
+		{
+			"name": "Departamentos",
+			"item": [
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Departamento de Computação\",\r\n    \"email\": \"depar.computacao@gmail.com\",\r\n    \"telefone\": \"1122334455\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/departamentos",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/departamentos",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"departamentos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/departamentos/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"departamentos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Departamento de Computação 2\",\r\n    \"email\": \"depar.computacao2@gmail.com\",\r\n    \"telefone\": \"1122334456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/departamentos/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"departamentos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/departamentos/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"departamentos",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**Nesta sessão será possível cadastrar o departamento, buscar todos, buscar por ID, atualizar e deletar.**\n\n---\n\nO campo de cadastro (POST) precisa seguir a seguinte estrutura, os campos aceitos serão: nome, email, telefone.\n\n{\n\n\"nome\": \"\",\n\n\"email\": \"\",\n\n\"telefone\": \"\",\n\n}\n\n---\n\nPara buscar todos basta usar a variável apiUrl/departamentos em GET.\n\n---\n\nPara buscar por ID basta usar em GET apiUrl/departamentos/ id obtida no cadastro de departamentos .\n\n---\n\nPara atualizar basta usar em PUT apiUrl/departamentos/ id obtida no cadastro de departamentos , com uma requisição de corpo seguindo o mesmo modelo do cadastro.\n\n---\n\nPara deletar basta usar em DELETE apiUrl/departamentos/ id obtida no cadastro de departamentos ."
+		},
+		{
+			"name": "Disciplinas",
+			"item": [
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Estrutura de dados\",\r\n    \"descricao\": \"Teste\",\r\n    \"cargaHoraria\": \"60\",\r\n    \"semestre\": \"1ª\",\r\n    \"curso\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/disciplinas",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"disciplinas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/disciplinas",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"disciplinas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/disciplinas/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"disciplinas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"teste1\",\r\n    \"descricao\": \"\",\r\n    \"cargaHoraria\": \"60\",\r\n    \"semestre\": \"2ª\",\r\n    \"curso\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/disciplinas/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"disciplinas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/disciplinas/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"disciplinas",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**Nesta sessão será possível cadastrar as disiciplinas, buscar todos, buscar por ID, atualizar e deletar.**\n\n---\n\nO campo de cadastro (POST) precisa seguir a seguinte estrutura, os campos aceitos serão: nome, descricao, cargaHoraria, semestre, curso:\n\n{\n\n\"nome\": \"\",\n\n\"descricao\": \"\",\n\n\"cargaHoraria\": \"\",\n\n\"semestre\": \"\",\n\n\"curso\": id obtido no cadastro de cursos\n\n}\n\nObs: o campo de curso é opcional, faça apenas se houver curso já cadastrado.\n\n---\n\nPara buscar todos basta usar a variável apiUrl/disciplinas em GET.\n\n---\n\nPara buscar por ID basta usar em GET apiUrl/disciplinas / id obtida no cadastro de disciplinas .\n\n---\n\nPara atualizar basta usar em PUT apiUrl/disciplinas / id obtida no cadastro de disciplinas , com uma requisição de corpo seguindo o mesmo modelo do cadastro.\n\n---\n\nPara deletar basta usar em DELETE apiUrl/disciplinas / id obtida no cadastro de disciplinas ."
+		},
+		{
+			"name": "Professor",
+			"item": [
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Maria Souza\",\r\n    \"cpf\": \"12345678912\",\r\n    \"email\": \"maria.souza@gmail.com\",\r\n    \"telefone\": \"61 999882233\",\r\n    \"departamento\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/professores",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"professores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/professores",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"professores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/professores/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"professores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"João Silva\",\r\n    \"cpf\": \"12345678915\",\r\n    \"email\": \"joãosilva@gmail.com\",\r\n    \"telefone\": \"61 999882235\",\r\n    \"departamento\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/professores/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"professores",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/professors/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"professors",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**Nesta sessão será possível cadastrar o professor, buscar todos, buscar por ID, atualizar e deletar.**\n\n---\n\nO campo de cadastro (POST) precisa seguir a seguinte estrutura, os campos aceitos serão: nome, cpf, email, telefone, departamento:\n\n{\n\n\"nome\": \"\",\n\n\"cpf\": \"\",\n\n\"email\": \"\",\n\n\"telefone\": \"\",\n\n\"departamento\": id obtido no cadastro de departamentos\n\n}\n\nObs: o campo de departamento é opcional, faça apenas se houver departamento já cadastrado.\n\n---\n\nPara buscar todos basta usar a variável apiUrl/professores em GET.\n\n---\n\nPara buscar por ID basta usar em GET apiUrl/professores/ id obtida no cadastro de professores.\n\n---\n\nPara atualizar basta usar em PUT apiUrl/professores/ id obtida no cadastro de professores , com uma requisição de corpo seguindo o mesmo modelo do cadastro.\n\n---\n\nPara deletar basta usar em DELETE apiUrl/professores/ id obtida no cadastro de professores ."
+		},
+		{
+			"name": "Turmas",
+			"item": [
+				{
+					"name": "Cadastrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"ADS3BC\",\r\n    \"turno\": \"Noturno\",\r\n    \"sala\": \"AB20\",\r\n    \"disciplina\": \"\",\r\n    \"professor\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/turmas",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"turmas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Todos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/turmas",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"turmas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Por Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/turmas/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"turmas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"ADS3BC\",\r\n    \"turno\": \"Matutino\",\r\n    \"sala\": \"AB20\",\r\n    \"disciplina\": \"\",\r\n    \"professor\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/turmas/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"turmas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/turmas/",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"turmas",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "**Nesta sessão será possível cadastrar a turma, buscar todos, buscar por ID, atualizar e deletar.**\n\n---\n\nO campo de cadastro (POST) precisa seguir a seguinte estrutura, os campos aceitos serão: nome, turno, sala, disciplina, professor:\n\n{\n\n\"nome\": \"\",\n\n\"turno\": \"\",\n\n\"sala\": \"\",\n\n\"disciplina\": id obtido no cadastro de disciplinas\n\n\"professor\": id obtido no cadastro de professores\n\n}\n\nObs: os campos de disciplina e professor, é opcional, faça apenas se houver disciplina, professor já cadastrado.\n\n---\n\nPara buscar todos basta usar a variável apiUrl/turmas em GET.\n\n---\n\nPara buscar por ID basta usar em GET apiUrl/turmas/ id obtida no cadastro de turmas .\n\n---\n\nPara atualizar basta usar em PUT apiUrl/turmas/ id obtida no cadastro de turmas , com uma requisição de corpo seguindo o mesmo modelo do cadastro.\n\n---\n\nPara deletar basta usar em DELETE apiUrl/turmas/ id obtida no cadastro de turmas ."
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndhbmRlcnNvbi5jYXNzaW9AaWVzYi5lZHUuYnIiLCJpYXQiOjE3MTgzMjE0MzIsImV4cCI6MTcxODMyNDc5Mn0.OobR6WgJh047w0TyGcT2msUdumuHGveBshf7fVU3Gy8",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiUrl",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
