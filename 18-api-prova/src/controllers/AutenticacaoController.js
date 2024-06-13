@@ -42,7 +42,7 @@ try {
         from: process.env.EMAIL_USER, 
         to: email, // Envia o e-mail para o novo usuário registrado
         subject: "Seja bem-vindo!",
-        text: "Olá, sou seu colega Anderson, desculpe o email estranho. Este é um email de teste simples para confirmar que a API está funcionando e que foi integrada. Espero que isso te dê um norte para realizar o trabalho de backend que foi passado! Esta api está usando o pacote nodemailer, estarei subindo esta aplicação e anotações de como implementá-la no meu github logo mais."
+        text: "Seja bem-vindo (a) à Faculdade Construcao Backend!"
     })
     res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!" })
 } catch (error) {
