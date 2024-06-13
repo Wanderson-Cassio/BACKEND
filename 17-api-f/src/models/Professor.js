@@ -6,16 +6,16 @@ const schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        descricao: {
+        cpf: {
             type: String,
-            required: false
+            required: true
         },
-        duracao: {
+        email: {
             type: String,
-            required: false
+            required: true
         },
-        modalidade: {
-            type: String,
+        dataNascimento: {
+            type: Date,
             required: false
         },
         disciplinas: {
@@ -28,6 +28,6 @@ const schema = new mongoose.Schema(
     }
 )
 
-const Curso = mongoose.model('curso', schema)
+const Professor = mongoose.model('professor', schema)
 
-module.exports = Curso
+module.exports = Professor

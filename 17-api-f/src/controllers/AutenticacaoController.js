@@ -25,8 +25,6 @@ async function registrar(req, res) {
 
     await usuario.save()
 
-    
-
     res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!" })
 }
 
@@ -47,7 +45,7 @@ async function login(req, res) {
         return res.status(401).json({ mensagem: "usuário ou senha inválidos!" })
     }
 
-    const token = jwt.sign({ email: usuario.email }, JWT_SECRET, { expiresIn: '30m' })
+    const token = jwt.sign({ email: usuario.email }, JWT_SECRET, { expiresIn: '56m' })
 
     res.json(
         {

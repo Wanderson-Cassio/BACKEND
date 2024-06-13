@@ -6,19 +6,11 @@ const schema = new mongoose.Schema(
             type: String,
             required: true
         },
-        cpf: {
-            type: String,
-            required: true
-        },
         email: {
             type: String,
             required: true
         },
-        dataNascimento: {
-            type: Date,
-            required: false
-        },
-        disciplinas: {
+        senha: {
             type: String,
             required: true
         }
@@ -28,6 +20,6 @@ const schema = new mongoose.Schema(
     }
 )
 
-const Professor = mongoose.model('professor', schema)
+const Usuario = mongoose.model('usuario', schema)
 
-module.exports = Professor
+module.exports = Usuario

@@ -14,7 +14,7 @@ const schema = yup.object().shape({
         .date('Data inválida'),
     disciplinas: yup
         .string('campo precisa ser uma texto')
-        .required('campo obrigatório')
+        .required('campo obrigatório'),
 
 })
 

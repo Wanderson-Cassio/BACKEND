@@ -28,16 +28,7 @@ const schema = new mongoose.Schema(
         },
         genero: {
             type: String,
-            required: true
-        },
-        endereco: {
-            cep: String,
-            uf: String,
-            logradouro: String,
-            localidade: String,
-            bairro: String,
-            numero: String,
-            complemento: String
+            required: false
         },
         cargo: {
             type: mongoose.SchemaTypes.ObjectId,

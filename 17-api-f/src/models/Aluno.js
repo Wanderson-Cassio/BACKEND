@@ -25,7 +25,7 @@ const schema = new mongoose.Schema(
         curso: {
             type: mongoose.SchemaTypes.ObjectId,
             ref: 'curso',
-            required: true
+            required: false
         },
     },
     {
