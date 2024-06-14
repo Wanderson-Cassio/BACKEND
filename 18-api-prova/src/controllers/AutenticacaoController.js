@@ -42,7 +42,7 @@ try {
         from: process.env.EMAIL_USER, 
         to: email, // Envia o e-mail para o novo usuário registrado
         subject: "Seja bem-vindo!",
-        text: "Seja bem-vindo (a) à Faculdade Construcao Backend!"
+        text: "Estudar é abrir mão de momentos de descanso agora para ter muito mais alegrias no futuro. O conhecimento é a arma mais poderosa para alcançar a realização pessoal."
     })
     res.status(201).json({ mensagem: "Usuário cadastrado com sucesso!" })
 } catch (error) {
