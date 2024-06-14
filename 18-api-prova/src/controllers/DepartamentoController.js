@@ -34,7 +34,7 @@ async function remove(req, res) {
     if (departamentoExcluido) {
         res.json({
             mensagem: "Departamento excluido com sucesso!",
-            alunoExcluido
+            departamentoExcluido
         })
     } else {
         res.status(404).json({ mensagem: "Departamento não encontrato!" })
